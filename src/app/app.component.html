@@ -2,7 +2,12 @@
 <div id="wrapper">
 
   <!-- Sidebar -->
-  <navigation-sidebar></navigation-sidebar>
+  <navigation-sidebar 
+  mainIconMenu="fa-cogs"
+  titleMenu="MTWDM 101"
+  [sidemenuItems]="sidemenuItems">
+
+  </navigation-sidebar>
   <!-- /sidebar -->
 
   <!-- Content Wrapper -->
@@ -12,15 +17,16 @@
     <div id="content">
 
       <!-- Topbar -->
-      <navigation-topbar [menuProfileItems]="menuItems"
-      (onClickMenu)="listenChildMenuEvent($event)">
-    </navigation-topbar>
+      <navigation-topbar [menuProfileItems]="menuItems" (onClickMenu)="listenChildMenuEvent($event)">
+      </navigation-topbar>
       <!-- /topbar -->
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
 
         <pre>
+
+          {{sidemenuItems | json}}
 </pre>
 
 

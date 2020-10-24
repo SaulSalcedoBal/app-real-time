@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MainTopBarMenuService } from './services/core/main-top-bar-menu.service';
+import { SideBarMenuService } from './services/core/side-bar-menu.service';
 
 //TypeScript
 declare var App:/*tipo de variable (cualquiera) -->*/any;
@@ -10,7 +11,7 @@ declare var App:/*tipo de variable (cualquiera) -->*/any;
 })
 export class AppComponent /* Add the next part to load the js */ implements OnInit {
 
-  constructor(private menuSvc: MainTopBarMenuService) {
+  constructor(private menuSvc: MainTopBarMenuService, private menuSb: SideBarMenuService) {
 
   }
 
@@ -22,6 +23,8 @@ export class AppComponent /* Add the next part to load the js */ implements OnIn
 
   menuItems: any[] = [];
 
+  sidemenuItems: any[] = [];
+
 
   // Primer elemento al correr un componente
   ngOnInit() {
@@ -29,12 +32,24 @@ export class AppComponent /* Add the next part to load the js */ implements OnIn
     App.init();
     // Load Data
     this.getData();
+
+    this.getDataSideBar();
   }
 
   getData() {
     this.menuSvc.getItemsMenu().subscribe((data: any) => {
       //Async
       this.menuItems = data;
+
+    });
+
+
+  }
+
+  getDataSideBar() {
+    this.menuSb.getItemsMenuSideBar().subscribe((dat: any) => {
+      //Async
+      this.sidemenuItems = dat;
 
     });
 
