@@ -145,7 +145,7 @@
           <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
         </div>
       </li>
-{{menuProfileItems[0].title}}
+
       <div class="topbar-divider d-none d-sm-block"></div>
       <!-- Nav Item - User Information -->
       <li class="nav-item dropdown no-arrow">
@@ -157,7 +157,7 @@
         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
           <a class="dropdown-item" href="javascript:void(0)" *ngFor="let item of menuProfileItems; let i=index" 
           (click)="onclick_menu(i, item)">
-          {{menuProfileItems[0].title}}
+          
             <i class="fas {{item.icon}} fa-sm fa-fw mr-2 {{item.color}}"></i>
             {{item.title}}          
           </a>
