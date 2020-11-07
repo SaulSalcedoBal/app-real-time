@@ -2,21 +2,25 @@
     {
         "title": "Perfil",
         "icon": "fa-user",
-        "color": "text-gray-400"
+        "color": "text-gray-400",
+        "route": ["components/perfil"]
     },
     {
         "title": "Configuraciones",
         "icon": "fa-cogs",
-        "color": "text-gray-400"
+        "color": "text-gray-400",
+        "route": ["components/configuraciones"]
     },
     {
         "title": "Registro de Actividad",
         "icon": "fa-list",
-        "color": "text-gray-400"
+        "color": "text-gray-400",
+        "route": ["components/registro"]
     },
     {
         "title": "Cerrar Sesión",
         "icon": "fa-sign-out-alt",
-        "color": "text-gray-400"
+        "color": "text-gray-400",
+        "route": ["components/cerrar"]
     }
 ]

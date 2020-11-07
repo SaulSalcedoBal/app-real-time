@@ -6,11 +6,18 @@ import { TarjetasComponent } from './tarjetas/tarjetas.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { CancelacionComponent } from './cancelacion/cancelacion.component';
 import { ComponentesRouterModule } from './componentes.routes';
+import { BotonesTestComponent } from './botones-test/botones-test.component';
+import { NewTestComponent } from './new-test/new-test.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { ConfiguracionesComponent } from './configuraciones/configuraciones.component';
+import { RegistroComponent } from './registro/registro.component';
+import { CerrarComponent } from './cerrar/cerrar.component';
+import { PaisesComponent } from './paises/paises.component';
 
 
 
 @NgModule({
-  declarations: [ComponentesComponent, BotonesComponent, TarjetasComponent, BusquedaComponent, CancelacionComponent],
+  declarations: [ComponentesComponent, BotonesComponent, TarjetasComponent, BusquedaComponent, CancelacionComponent, BotonesTestComponent, NewTestComponent, PerfilComponent, ConfiguracionesComponent, RegistroComponent, CerrarComponent, PaisesComponent],
   imports: [
     CommonModule,
     ComponentesRouterModule

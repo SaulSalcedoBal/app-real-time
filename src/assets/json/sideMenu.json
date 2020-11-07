@@ -7,6 +7,13 @@
         "items": []
     },
     {
+        "section": "",
+        "title": "Paises",
+        "icon": "fa-flag",
+        "route": ["components/paises"],
+        "items": []
+    },
+    {
         "section": "INTERFACE",
         "title": "Components",
         "icon": "fas fa-fw fa-cog",

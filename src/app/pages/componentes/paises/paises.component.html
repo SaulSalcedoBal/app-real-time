@@ -1,0 +1,32 @@
+<h1>PAISES</h1>
+
+
+<div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+    <div class="input-group">
+      <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" #testcriterio>
+      <div class="input-group-append">
+        <button class="btn btn-primary" type="button" (click)="searchCriterio(testcriterio.value)">
+          <i class="fas fa-search fa-sm"></i>
+        </button>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3" *ngFor=" let item of paisesList">
+        <div class="card">
+            <img [src]="item.flag" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <small>{{item.capital}}</small>
+                <p class="card-text">{{item.region}}</p>
+                <p class="card-text">{{item.subregion}}</p>
+                <p class="card-text">{{item.population | number}}</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+                <a href="#"><button type="button" class="btn btn-primary">Ver Mapa</button></a>
+            </div>
+        </div>
+    </div>
+</div>
